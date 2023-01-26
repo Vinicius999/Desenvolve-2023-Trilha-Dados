@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    var n = parseInt(prompt("Deseja adivinha um valor de 0 até qual valor?"))
+    var numeroPensado = sorteia(n);
+    var tentativas = 1;
+
+    while(tentativas <= 3) {
+        var chute = parseInt(prompt("Digite seu chute!"));
+
+        if(chute == numeroPensado) {
+            mostra("Você ACERTOU, o número pensado era " + numeroPensado);
+            break;
+        } else {
+            mostra("Você ERROU!");
+        }
+
+        tentativas++;
+    }
+
+mostra("FIM");
+</script>
