@@ -1,7 +1,6 @@
-# Aula 03: Modelagem física 
+# Aula 04: Tipos de dados, tabelas e colunas
 
-- Instalar o **SQL Power Architect**;
-- Identificar o modelo físico;
-- Construir tabelas no modelo físico;
-- Construir colunas no modelo físico;
-- Reconhecer outros softwares para a criação do modelo físico.
+- Identificar os tipos de dados das colunas;
+- Conhecer outros tipos de dados;
+- Construir uma tabela no modelo físico;
+- Construir uma coluna no modelo físico.
