@@ -94,7 +94,7 @@ A **quinta forma normal** deve satisfazer as propriedades baseadas na **dependê
 - Explicar a **dependência funcional trivial**;
 - Aplicar a **forma normal de Boyce-Codd**.
 
-#### 1 - Dependência transitiva
+#### 1 - Dependência transitiva e 3FN
 
 **Dependência transitiva** ocorre quando um atributo não-chave não depende da chave primária, nem parcialmente, mas depende de outro atributo não-chave.
 
@@ -115,3 +115,37 @@ Para aplicar a forma normal de Boyce-Codd, devemos:
 
 1. Identificar todos os atributos determinados por outro atributo que não uma chave candidata;
 2. Removê-los e levá-los para outra tabela.
+
+## Aula 04 - Quarta Forma Normal - 4FN
+
+#### 00 - Objetivos
+
+- Diferenciar a dependência funcional da dependência multivalorada;
+- Explicar a dependência multivalorada;
+- Aplicar a quarta forma normal.
+
+#### 1 - Dependencia Multivalorada e 4FN
+
+Na **dependência funcional**, o valor de um atributo determina o valor de outro atributo. Já na **dependência multivalorada**, o atributo determina um conjunto de valores de um atributo. 
+
+A dependência funcional é representada por **X -> Y** (X determina funcionalmente Y) e a dependência multivalorada é representada por **X ->> Y** (X determina multivalores em Y).
+
+Na **Quarta Forma Normal - 4FN**, a tabela precisa estar na terceira forma normal e não ter mais de um atributo multivalorado. Ou seja, **na quarta forma normal não pode existir dependência multivalorada**.
+
+1. Temos que identificar se existe um multi determinante que aponte para mais de um multi dependente e se existe independência entre esses multi dependentes, isto é, se há independência dentre os atributos;
+2. Dividimos a tabela original em outras duas novas tabelas, colocando cada atributo dependente em uma tabela distinta juntamente com o campo determinante.
+
+## Aula 05 - Quinta Forma Normal - 5FN
+
+#### 00 - Objetivos
+
+- Compreender a dependência de junção;
+- Reconhecer e aplicar a quinta forma normal.
+
+## 1 - Dependência de junção e 5FN
+
+**Dependência de junção** ocorre quando realizamos a decomposição de uma tabela em outras três relações. Tais relações são novamente compostas, caso não sejam geradas tuplas falsas, isto é, quando os dados originais são preservados na tabela.
+
+Para aplicarmos a quinta forma normal, precisamos conhecer os conceitos de decomposição sem perdas e de junção. Levando assim a ser conhecida como a forma normal de **projeção-junção**.
+
+Uma tabela está na **Quinta Forma Normal - 5FN** se estiver na quarta forma normal e se não houver dependência de junção.
