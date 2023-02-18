@@ -4,6 +4,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- Ativando FOREIGN KEYs
 SET FOREIGN_KEY_CHECKS = 1;
 
+
 -- Inserindo valores nas tabelas
 INSERT INTO livros VALUES (
 	1, 'Percy Jackson e o Ladrão de Raios',  'Rick Riordan', 'Intrínseca', 'Aventura', 34.45

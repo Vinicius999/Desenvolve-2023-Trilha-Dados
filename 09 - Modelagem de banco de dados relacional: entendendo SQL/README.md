@@ -245,9 +245,172 @@ CHANGE nome_vendedor nome_vendedor_NEW VARCHAR(255) NOT NULL;
 DROP TABLE vendedores
 ```
 
-#### 
+## Aula 05 - Unindo tabelas
 
+#### 00 - Objetivos
 
+- Construir filtro usando duas tabelas com o comando `WHERE`;
+- Usar funções de agregações para trazer métricas nas consultas;
+- Identificar a origem do campo selecionado usando o modelo `TABELA.CAMPO`;
+- Fazer a junção entre tabelas com o `INNER JOIN`, `LEFT JOIN` e `RIGHT JOIN`.
 
+#### 01 - Filtro usando duas tabelas
 
+Podemos apresentar resultados a partir da junção de duas tabelas. No exemplo abaixo, podemos apresentar o `nome_vendedor` da tabela `id_vendedor`, junto com o somatório de `qtd_venda` da tabela `vendas`, agrupando esse somatório `id_vendedor`, usando o `GROUP BY`.
 
+```sql
+SELECT v.id_vendedor,
+	v.nome_vendedor,
+	SUM(p.qtd_venda)
+FROM vendedores AS v, vendas AS p
+WHERE v.id_vendedor = p.id_vendedor
+GROUP BY v.id_vendedor;
+```
+
+Usamos a cláusula `AS` apelidando o nome da tabela, mas omitindo o `AS` o comando também funcionaria.
+
+#### 02 - INNER JOIN
+
+Uma outra maneira para apresentar resultados a partir da junção de duas tabelas é o `INNER JOIN`. 
+
+O `INNER JOIN` representa a interseção entre tabelas, como na imagem abaixo:
+
+<p>
+    <img src="https://github.com/Vinicius999/Desenvolve-2023-Trilha-Dados/blob/main/09%20-%20Modelagem%20de%20banco%20de%20dados%20relacional:%20entendendo%20SQL/images/inner_join_left_join.png?raw=true" height="300"/>
+</p>
+
+Então, teremos **todas as informações que tem em uma e tem em outra**. No nosso caso, o campo que referencia essas duas, é o `id_vendedor`. Então, a consulta vai mostrar todos os vendedores que realizaram uma venda, ou seja, todos os vendedores que estão no quadro de vendedores na tabela `vendedores`, e que realizaram uma venda, ou seja, que estão na tabela `vendas`.
+
+Abaixo é mostrado o mesmo exemplo usado anteriormente, mas dessa vez usando o `INNER JOIN`. Para fazer a comparação no `INNER JOIN`, usamos a cláusula `ON` ao invés do `WHERE`.
+
+```sql
+SELECT v.id_vendedor,
+	v.nome_vendedor,
+	SUM(p.qtd_venda)
+FROM vendedores AS v
+INNER JOIN vendas AS p
+ON v.id_vendedor = p.id_vendedor
+GROUP BY v.id_vendedor;
+```
+
+#### 03 - FUNÇÕES DE AGRAGAÇÃO
+
+Além de consultar os valores puramente como foram inseridos na tabela, podemos construir informações com métricas que resumem uma tabela. Isso pode ser feito com as **funções de agregações**. São exemplos de funções de agregação:
+
+- `MAX`: a partir de um conjunto de valores é retornado o maior entre eles;
+- `MIN`: analisa um grupo de valores e retorna o menor entre eles;
+- `SUM`: calcula o somatório dos valores de um campo específico;
+- `AVG`: realiza a média aritmética dos valores de uma determinada coluna; e
+- `COUNT`: contabiliza a quantidade de linhas selecionadas.
+
+Usando o `GROUP BY` agrupamos os registros que serão agregados em grupos de valores permitindo que a função de agregação seja realizada para cada um desses grupos.
+
+Como exemplo, para saber a maior venda feita no Clube do Livro, podemos construir o comando:
+
+```sql
+SELECT MAX(qtd_venda) FROM vendas
+GROUP BY(id_vendedor);
+```
+
+#### 04 - LEFT JOIN
+
+Uma outra maneira para apresentar resultados a partir da junção de duas tabelas é o `LEFT JOIN`. 
+
+O `LEFT JOIN`  traz informações da primeira tabela do *join*, ou seja, aquela tabela à esquerda, e procurar correspondência, informações, na segunda tabela do *join*, a tabela à direita. Como exemplo do uso do `LEFT JOIN`, buscamos por todos os livros da nossa base de dados foram vendidos (todos os `nome_livro` da tabela `livros`(da esquerda) junto com a `qtd_venda` da tabela `vendas` (direira), onde os livros não vendidos apresentarão seus nomes mas a quantidade vendida será `NULL`)
+
+```sql
+SELECT l.nome_livro, v.qtd_venda
+FROM livros l
+LEFT JOIN vendas v
+ON v.id_livro = l.id_livro
+WHERE qtd_venda IS NULL
+ORDER BY v.qtd_venda;
+```
+
+Adicionando a cláusula `WHERE`, temos somente os livros com `qtd_venda` iguais a `NULL`, ou seja, os livros com nenhuma venda.
+
+#### 05 - Tipos de Junção (JOIN)
+
+Confira as diferença entre as principais junções:
+
+- **INNER JOIN**
+
+O `INNER JOIN` é a **interseção** entre duas tabelas, ou seja, na consulta aparecerá todas as informações de um determinado campo da tabela A que também foi encontrado na tabela B.
+
+![alt text:  ilustração de dois círculos cinzas lado a lado com uma parte sobreposta. O círculo da direita indica-se com a letra A e o círculo da esquerda indica-se com a letra B. A parte sobreposta é azul e contém “inner join”.](https://caelum-online-public.s3.amazonaws.com/2462-entendendo-sql/05/aula5-img1.png)
+
+**Para trazer a interseção das informações entre tabelas, podemos usar o comando:**
+
+```sql
+SELECT <CAMPOS>
+FROM TABELA_A
+INNER JOIN TABELA_B
+ON TABELA_A.CAMPO = TABELA_B.CAMPOCOPIAR CÓDIGO
+```
+
+- **LEFT JOIN**
+
+O `LEFT JOIN` baseia-se nas informações da tabela declarada à esquerda do comando ao se juntar com outra tabela.
+
+![alt text:  ilustração de dois círculos lado a lado com uma parte sobreposta. O círculo da direita indica-se com a letra A e o círculo da esquerda indica-se com a letra B. O círculo da direita está preenchido de azul e contém “left join”. ](https://caelum-online-public.s3.amazonaws.com/2462-entendendo-sql/05/aula5-img2.png)
+
+```sql
+SELECT <CAMPOS>
+FROM TABELA_A
+LEFT JOIN TABELA_B
+ON TABELA_A.CAMPO = TABELA_B.CAMPOCOPIAR CÓDIGO
+```
+
+- **RIGHT JOIN**
+
+![alt text:  ilustração de dois círculos lado a lado com uma parte sobreposta. O círculo da direita indica-se com a letra A e o círculo da esquerda indica-se com a letra B. O círculo da esquerda está preenchido de azul e contém “right join”. ](https://caelum-online-public.s3.amazonaws.com/2462-entendendo-sql/05/aula5-img3.png)
+
+```sql
+SELECT <CAMPOS>
+FROM TABELA_A
+RIGHT JOIN TABELA_B
+ON TABELA_A.CAMPO = TABELA_B.CAMPOCOPIAR CÓDIGO
+```
+
+- **FULL OUTER JOIN**
+
+Esse comando apresenta a união entre duas tabelas.
+
+1. Incluindo a interseção
+
+![alt text:  ilustração de dois círculos lado a lado com uma parte sobreposta. O círculo da direita indica-se com a letra A e o círculo da esquerda indica-se com a letra B. Os dois círculos estão preenchidos de azul e está escrito “full outer join”. ](https://caelum-online-public.s3.amazonaws.com/2462-entendendo-sql/05/aula5-img4.png)
+
+```sql
+SELECT <CAMPOS>
+FROM TABELA_A
+FULL OUTER JOIN TABELA_B
+ON TABELA_A.CAMPO = TABELA_B.CAMPOCOPIAR CÓDIGO
+```
+
+ou
+
+```sql
+SELECT <CAMPOS>
+FROM TABELA_A
+LEFT JOIN TABELA_B
+ON TABELA_A.CAMPO = TABELA_B.CAMPO
+
+UNION 
+
+SELECT <CAMPOS>
+FROM TABELA_A
+RIGHT JOIN TABELA_B
+ON TABELA_A.CAMPO = TABELA_B.CAMPOCOPIAR CÓDIGO
+```
+
+1. Excluindo a interseção
+
+![alt text:  ilustração de dois círculos lado a lado com uma parte sobreposta. O círculo da direita indica-se com a letra A e o círculo da esquerda indica-se com a letra B.Os dois círculos estão preenchidos de azul e está escrito “full outer join” e a sobreposição dos círculos está preenchida de cinza. ](https://caelum-online-public.s3.amazonaws.com/2462-entendendo-sql/05/aula5-img5.png)
+
+```sql
+SELECT <CAMPOS>
+FROM TABELA_A
+INNER JOIN TABELA_B
+ON TABELA_A.CAMPO = TABELA_B.CAMPO
+WHERE TABELA_A.CAMPO IS NULL OR TABELA_B.CAMPO IS NULL
+```
