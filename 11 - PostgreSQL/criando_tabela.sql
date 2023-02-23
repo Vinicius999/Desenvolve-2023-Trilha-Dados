@@ -259,13 +259,28 @@ JOIN curso ON curso.id = aluno_curso.curso_id
 ORDER BY curso.nome, aluno.nome
 
 
+-- Limitando a consulta
+
+SELECT *
+FROM funcionarios
+ORDER BY nome
+LIMIT 5;
+
+SELECT *
+FROM funcionarios
+ORDER BY id
+LIMIT 5
+OFFSET 1;
 
 
+-- Agrupamentos
 
+select * from aluno_curso;
 
-
-
-
+select *
+from aluno
+join aluno_curso on aluno.id = aluno_curso.aluno_id
+join curso on curso.id = aluno_curso.curso_id
 
 
 
