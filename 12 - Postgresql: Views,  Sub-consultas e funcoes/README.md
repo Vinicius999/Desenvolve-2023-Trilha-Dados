@@ -10,9 +10,9 @@
 
 ## Aula 02 - Praticando comandos
 
-- a
-- b
-- c
+- Revisamos os comandos de manipulação de dados (INSERT, UPDATE e DELETE);
+- Vimos na prática como relatórios reais são montados;
+- Exercitamos os conceitos de SELECTs, JOINs, etc.
 
 ## Aula 03 - Aula 03
 
