@@ -10,12 +10,27 @@
 
 ## Aula 02 - Praticando comandos
 
-- Revisamos os comandos de manipulação de dados (INSERT, UPDATE e DELETE);
+#### Objetivos:
+
+- Revisamos os comandos de manipulação de dados (**`INSERT`**, **`UPDATE`** e **`DELETE`**);
 - Vimos na prática como relatórios reais são montados;
-- Exercitamos os conceitos de SELECTs, JOINs, etc.
+- Exercitamos os conceitos de **`SELECT`**s, **`JOIN`**s, etc.
 
 ## Aula 03 - Aula 03
 
-- a
-- b
-- c
+#### Objetivos:
+
+- Aprendemos a utilizar o operador **`IN`**;
+- Conhecemos as sub-consultas;
+- Vimos que sub-consultas podem ser utilizadas como um campo ou como uma "tabela virtual";
+
+## Aula 04 - Usando funções
+
+#### Objetivos:
+
+- Vimos o que mais diferencia um sistema de banco de dados de outros: funções;
+- Aprendemos funções que manipulam diferentes tipos de dados;
+  - Datas
+  - Números
+  - Strings
+- Entendemos sobre conversão de tipos e vimos como realizá-las na prática.
