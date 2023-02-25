@@ -34,3 +34,10 @@
   - Números
   - Strings
 - Entendemos sobre conversão de tipos e vimos como realizá-las na prática.
+
+## Aula 05 - Criando Views
+
+- Conhecemos o conceito de "tabelas virtuais" e visões, em inglês, **`VIEW`**s;
+- Vimos na prática o processo de criação de views;
+- Tratamos relatórios utilizando views;
+- Falamos de pontos importantes sobre performance quando o assunto são Views;
