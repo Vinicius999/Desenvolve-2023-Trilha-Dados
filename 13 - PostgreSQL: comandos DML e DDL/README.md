@@ -16,23 +16,38 @@
 - Falamos sobre os detalhes ao criar uma tabela;
 - Conhecemos o **`ALTER TABLE`** para alterar a estrutura de uma tabela;
 - Vimos a diferença entre comandos **DDL** e **DML**.
+  - **DDL**:
+    - `CREATE`
+    - `ALTER`
+    - `DROP`
 
-## Aula 03 - C
+  - **DML**:
+    - `INSERT`
+    - `UPDATE`
+    - `DELETE`
+    - `SELECT`
+
+
+## Aula 03 - inclusão de Dados
 
 #### Objetivos:
 
-- a
-- b
-- c
+- Entendemos as particularidades da representação de tipos e uso de aspas em SQL;
+- Conhecemos o comando `INSERT SELECT` que realiza inserções a partir de uma consulta;
+- Falamos sobre importação e exportação de dados em arquivos CSV.
 
-## Aula 04 - D
+## Aula 04 - Alteração de dados
 
 #### Objetivos:
 
-- a
-- b
+- Conhecemos a sintaxe do **`UPDATE FROM`**, que atualiza uma tabela baseando-se em dados de uma consulta;
+- Vimos os perigos de uma alteração ou remoção incorreta (sem `WHERE`, por exemplo);
+- Aprendemos a trabalhar com transações;
+- Vimos como confirmar ou cancelar uma transação com **`BEGIN`**, **`ROLLBACK`**, **`COMMIT`**.
 
-## Aula 05 - E
+## Aula 05 - Particularidades PostgreSQL
 
-- a
-- b
+- Conhecemos as `SEQUENCE`s do PostgreSQL;
+- Aprendemos o que é uma `ENUM`;
+- Aprendemos a criar um tipo personalizado no banco de dados;
+- Conversamos sobre como bancos de dados são utilizados na vida real.
