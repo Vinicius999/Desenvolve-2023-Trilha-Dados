@@ -18,3 +18,11 @@
   - Com variáveis de saída
 - Entendemos como retornar mais de um dado por vez em nossas funções através do `SETOF`
 - Conhecemos um dos possíveis usos para o tipo `RECORD`.
+
+## Aula 03 - Linguagem Procedural
+
+- Entendemos as limitações do SQL quando se trata de programação;
+- Conhecemos a linguagem PLpgSQL, que é uma linguagem de Programação Procedural criada pelo PostgreSQL como uma extensão ao SQL;
+- Aprendemos sobre a estrutura básica de criação de uma função usando PLpgSQL;
+- Aprendemos a definir variáveis;
+- Entendemos o conceito de blocos e escopos usando PLpgSQL.
