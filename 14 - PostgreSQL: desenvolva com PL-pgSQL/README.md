@@ -26,3 +26,27 @@
 - Aprendemos sobre a estrutura básica de criação de uma função usando PLpgSQL;
 - Aprendemos a definir variáveis;
 - Entendemos o conceito de blocos e escopos usando PLpgSQL.
+
+## Aula 04 - Estruturas de Controle
+
+- Vimos como retornar valores utilizando PLpgSQL;
+- Aprendemos a tomar decisões em nossos códigos usando `IF`;
+- Conseguimos controlar o fluxo de nossa aplicação com `ELSEIF` e `ELSE`;
+- Aprendemos a deixar nosso código um pouco mais legível com `CASE`.
+
+## Aula 05 - Estruturas de Repetição
+
+- Vimos mais uma forma de retornar valores através do `RETURN NEXT`;
+- Entendemos a necessidade de realizar operações "repetidas" em determinadas funções;
+- Aprendemos a usar a estrutura `LOOP` para repetir instruções;
+- Usamos `EXIT` para não cairmos em um "loop infinito";
+- Conhecemos a estrutura `WHILE` para facilitar a leitura do `LOOP` sem precisar do `EXIT`;
+- Aprendemos a usar (e quando usar) o famoso `FOR`;
+- Vimos como percorrer o resultado de uma query usando `FOR IN`.
+
+## Aula 06 - Mão na massa
+
+- Criamos funções mais próximas da vida real;
+- Aprendemos sobre a variável automaticamente criada em funções com PLpgSQL chamada `FOUND`;
+- Conseguimos realizar logs de operações feitas no banco de dados;
+- Aprendemos a realizar cálculos com conversões de tipos usando PLpgSQL.

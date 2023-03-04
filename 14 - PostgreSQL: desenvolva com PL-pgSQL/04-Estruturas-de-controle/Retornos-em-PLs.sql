@@ -54,7 +54,6 @@ CREATE OR REPLACE FUNCTION cria_instrutor_falso() RETURNS instrutor AS $$
 	END;
 $$ LANGUAGE plpgsql;
 
-
 CREATE OR REPLACE FUNCTION cria_instrutor_falso() RETURNS instrutor AS $$
 	DECLARE
 		retorno instrutor;
@@ -68,15 +67,14 @@ SELECT id, salario FROM cria_instrutor_falso();
 
 
 -- Retornando conjuntos de linhas
-CREATE OR REPLACE FUNCTION instrutores_bem_pagos(valor_decimal DECIMAL) RETURNS SETOF instrutor AS $$
-	SELECT * FROM instrutor WHERE salario > valor_decimal;
-$$ LANGUAGE SQL;
+
+CREATE OR REPLACE FUNCTION instrutores_bem_pagos(valor_salario DECIMAL) RETURNS SETOF instrutor AS $$
+	BEGIN
+		RETURN QUERY SELECT * FROM instrutor WHERE salario > valor_salario;
+	END;
+$$ LANGUAGE plpgsql;
 
 SELECT * FROM instrutores_bem_pagos(300);
-
-
-
-
 
 
 
