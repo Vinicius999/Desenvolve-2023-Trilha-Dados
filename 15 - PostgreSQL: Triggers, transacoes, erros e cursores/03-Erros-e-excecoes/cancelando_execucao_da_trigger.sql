@@ -1,5 +1,6 @@
-
-DROP FUNCTION cria_instrutor;
+-- `EXCEPTION: Tratando erro
+-- `RAISE EXCEPTION`: Lançar uma exceção
+-- `ASSERT`: cancela a Trigger se a condição for false ou NULL
 
 CREATE OR REPLACE FUNCTION cria_instrutor() RETURNS TRIGGER AS $$
 	DECLARE
@@ -11,7 +12,6 @@ CREATE OR REPLACE FUNCTION cria_instrutor() RETURNS TRIGGER AS $$
 	BEGIN
 		SELECT AVG(NEW.salario) INTO media_salario FROM instrutor WHERE id <> NEW.id;
 		
-		BEGIN
 		IF NEW.salario > media_salario THEN
 			INSERT INTO log_instrutores (informacao) VALUES (NEW.nome || ' recebe acima da média');
 		END IF;
@@ -25,34 +25,28 @@ CREATE OR REPLACE FUNCTION cria_instrutor() RETURNS TRIGGER AS $$
 		END LOOP;
 		
 		percentual := (instrutores_recebem_menos::DECIMAL / total_instrutores::DECIMAL) * 100;
+		ASSERT percentual < 100::DECIMAL, 'Instrutores novos não podem receber mais do que os antigo';
+		
 		INSERT INTO log_instrutores (informacao)
 			VALUES (NEW.nome || ' recebe mais do que ' || percentual || '% da grade dos instrutores');
-		COMMIT;
 		
 		RETURN NEW;
+		
 	END;
 $$ LANGUAGE plpgsql;
 
-drop trigger cria_log_instrutor on instrutor;
-
-CREATE TRIGGER cria_log_instrutor AFTER INSERT ON instrutor
+DROP TRIGGER cria_log_instrutor ON instrutor;
+CREATE TRIGGER cria_log_instrutor BEFORE INSERT ON instrutor
 	FOR EACH ROW EXECUTE FUNCTION cria_instrutor();
 
 
-INSERT INTO instrutor (nome, salario) VALUES ('Outra instrutor', 600);
+
+INSERT INTO instrutor (nome, salario) VALUES ('João', 7000);
 
 
 
 select * from instrutor order by id;
-
-SELECT cria_instrutor('Outra instrutor', 500);
 select * from log_instrutores;
-
-
-
-
-
-
 
 
 
