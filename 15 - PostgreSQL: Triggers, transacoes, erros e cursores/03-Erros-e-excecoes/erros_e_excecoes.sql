@@ -1,9 +1,12 @@
 -- `EXCEPTION: Tratando erro
 -- `RAISE EXCEPTION`: Lançar uma exceção
 /*
-WHEN algum_erro THEN
+WHEN nome_do_erro THEN
 	RAISE EXCEPTION 'Mensagem de erro';  -- Cancela toda a execução da Trigger
 */
+-- Podemos usar `OTHERS` pra pegar qualquer erro não especificado
+-- WHEN SQLSTATE 'nº_codigo':  Podemos usar o código do erro >>>. 
+
 
 CREATE OR REPLACE FUNCTION cria_instrutor() RETURNS TRIGGER AS $$
 	DECLARE
@@ -21,7 +24,8 @@ CREATE OR REPLACE FUNCTION cria_instrutor() RETURNS TRIGGER AS $$
 		
 		FOR salario IN SELECT instrutor.salario FROM instrutor WHERE id <> NEW.id LOOP
 			total_instrutores := total_instrutores + 1;
-			
+			-- Para debugar, exibimos mensagens
+			--RAISE NOTICE 'Salário inserido: %  Salaário o instrutor existente: %', NEW.salario, salario;
 			IF NEW.salario > salario THEN
 				instrutores_recebem_menos := instrutores_recebem_menos + 1;
 			END IF;
@@ -35,7 +39,7 @@ CREATE OR REPLACE FUNCTION cria_instrutor() RETURNS TRIGGER AS $$
 		
 	-- Tratando erro
 	EXCEPTION
-		WHEN undefined_column THEN
+		WHEN undefined_column THEN -- Podemos usar o código do erro >>>. WHEN SQLSTATE 'nº_codigo'
 			RAISE NOTICE 'Algo de errado não está certo';
 			RAISE EXCEPTION 'Erro complicado de resolver';  -- Cancela toda a execução da Trigger
 		-- Trata exceção

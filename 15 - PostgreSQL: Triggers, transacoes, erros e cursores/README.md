@@ -15,3 +15,10 @@
 
 ## Aula 03 - Erros e Exceções
 
+- Aprendemos o que são os erros (ou exceções) do PostgreSQL
+- Aprendemos a gerar erros e mensagens com o `RAISE`
+- Aprendemos a usar o `ASSERT` que verifica condições e levanta exceções
+- Entendemos que o `RAISE` pode ser usado no processo de depuração
+
+## Aula 04 - Erros e Exceções
+
