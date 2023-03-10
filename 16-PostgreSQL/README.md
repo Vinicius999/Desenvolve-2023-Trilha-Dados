@@ -27,5 +27,5 @@
 - Conhecemos o comando `VACUUM` para limpar espaço em disco
 - Vimos como reindexar as tabelas do banco com o comando `REINDEX`
 
-
+## Aula 05 - 
 
