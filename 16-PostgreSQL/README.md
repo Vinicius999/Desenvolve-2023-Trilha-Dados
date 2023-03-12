@@ -27,5 +27,17 @@
 - Conhecemos o comando `VACUUM` para limpar espaço em disco
 - Vimos como reindexar as tabelas do banco com o comando `REINDEX`
 
-## Aula 05 - 
+## Aula 05 - Backup e Restauração
 
+- Entendemos que há diferentes tipos de backup e conversamos sobre como fazê-los
+- Vimos que há 2 principais formas de fazer backups
+  1. Através da linha de comando (usando `pg_dump`)
+  2. Através de interfaces gráficas (por exemplo, usando o `PgAdmin`)
+- Aprendemos como restaurar backups realizados também de 2 formas diferentes
+
+## Aula 06 - Planejamento de queries
+
+- Conhecemos o conceito do planejador de queries (*Query Planner*) do PostgreSQL
+- Aprendemos que o comando `EXPLAIN` pode nos dar informações sobre como uma query é executada
+- Aprendemos o que são e como utilizar índices
+- Vimos que apesar de serem uma ferramenta muito poderosa, índices nem sempre são a solução
