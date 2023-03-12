@@ -41,3 +41,12 @@
 - Aprendemos que o comando `EXPLAIN` pode nos dar informações sobre como uma query é executada
 - Aprendemos o que são e como utilizar índices
 - Vimos que apesar de serem uma ferramenta muito poderosa, índices nem sempre são a solução
+
+## Aula 07 - Usuários e Permissões
+
+- Vimos como permitir ou impedir o acesso ao servidor a partir de algum host
+- Conhecemos o arquivo `pg_hba.conf` que permite a configuração de acesso ao servidor baseado em hosts
+- Vimos que o PostgreSQL trabalha com um conceito de *ROLES*, que podem ser como usuários ou grupos
+- Aprendemos sobre os atributos dos *ROLES*
+- Entendemos que é possível dar ou retirar permissões específicas a *ROLES*
+
