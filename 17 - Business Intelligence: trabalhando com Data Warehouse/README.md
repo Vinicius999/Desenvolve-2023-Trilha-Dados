@@ -40,3 +40,8 @@
 - Que existem diversos tipos de OLAPs;
 - Os pontos importantes na hora de decidir quais os relatórios devem ser disponibilizados para cada tipo de usuário da empresa.
 
+## Aula 07 - Outros tópicos
+
+- O processo de construção de um sistema de BI;
+- Os conceitos da matriz dimensão indicador da empresa de suco de frutas;
+- Entendemos um pouco mais de algumas variações do BI como Data Mining, Balanced Scorecard e Big Data.
