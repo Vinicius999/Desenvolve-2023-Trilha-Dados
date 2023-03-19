@@ -29,3 +29,8 @@
 
 ## Aula 06 - As tabelas de fato
 - Que na criação das fatos devemos criar várias chaves estrangeiras com todas as tabelas de dimensão que fazem sentido.
+
+## Carregando dados na dimensão
+- Como atualizar dados em uma tabela de dimensão através do Microsoft Integration Services;
+- Que o tipo de dado é importante e deve ser levado em conta durante a atualização da tabela destino;
+- Que deve ser levado em conta se o registro a ser atualizado já existe ou não na tabela e que temos que usar um processo especial para tratar disto durante a carga.
