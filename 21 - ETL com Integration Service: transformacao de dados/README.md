@@ -6,8 +6,11 @@
 - Como recuperar a base do Data Warehouse e do projeto, caso você esteja utilizando uma máquina diferente da que foi a utilizada na Parte 1 do curso.
 
 ## Aula 02 - Carregando dimensão cliente
-- 
-- 
+- Que, quando usamos máquinas de 64 bits, se o Office for de 32 bits, precisamos instalar o drive de conexão com Excel para 32 bits;
+- Que podemos usar diversas expressões de transformação para alterar o dado;
+- Como usar dados de planilhas de Excel e de arquivos Flat File (TXT ou CSV);
+- Que quando vamos mesclar duas fontes de dados, precisamos antes ordená-las usando o mesmo critério;
+- Que a conversão dos dados deve ser efetuada para o mesmo tipo da tabela destino antes de usar a Dimensão de Alteração Lenta.
 
 **OBS:** No primeiro vídeo aparece o seguinte erro de conexão no componente "Origem do Excel":
 
@@ -29,3 +32,5 @@ Caso a solução dada pelo professor não funcione, realize os seguintes passos:
 Referências:
 1. https://developercommunity.visualstudio.com/t/ssis-does-not-allow-to-select-column/736076
 2. https://learn.microsoft.com/en-us/answers/questions/1179732/no-tables-or-views-when-connecting-to-excel-file-i
+
+## Aula 03 - Carregando dimensão cliente
