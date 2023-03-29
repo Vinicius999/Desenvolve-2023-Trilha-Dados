@@ -34,3 +34,6 @@ Referências:
 2. https://learn.microsoft.com/en-us/answers/questions/1179732/no-tables-or-views-when-connecting-to-excel-file-i
 
 ## Aula 03 - Carregando dimensão cliente
+
+- Que, no caso de dimensões no formato Flocos de Neve, temos que carregar sempre a tabela de nível mais alto para nível mais baixo;
+- Que no objeto de Classificação, quando queremos que somente venham linhas sem repetição (DISTINCT), temos que marcar a propriedade Remover linhas com valores de classificação duplicados.
