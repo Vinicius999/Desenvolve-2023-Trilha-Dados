@@ -37,3 +37,7 @@ Referências:
 
 - Que, no caso de dimensões no formato Flocos de Neve, temos que carregar sempre a tabela de nível mais alto para nível mais baixo;
 - Que no objeto de Classificação, quando queremos que somente venham linhas sem repetição (DISTINCT), temos que marcar a propriedade Remover linhas com valores de classificação duplicados.
+
+## Aula 04 - A dimensao organizacional
+- Como carregar uma dimensão irregular.
+- Como executar uma Store Procedure (script SQL Server) em T-SQL no Integration Services.
