@@ -41,3 +41,15 @@ Referências:
 ## Aula 04 - A dimensao organizacional
 - Como carregar uma dimensão irregular.
 - Como executar uma Store Procedure (script SQL Server) em T-SQL no Integration Services.
+
+## Aula 05 - Criação da dimensão tempo
+- Como usar parâmetros no processo de ETL para criar procedimentos variáveis.
+- Que, quando lemos diretamente de uma tabela SQL Server, ou de uma consulta onde os dados são obtidos de tabelas, o Integration Services entende o tipo original do campo e não é necessário usar o objeto de conversão de dados.
+
+## Aula 06 - Tabelas de fato
+- A carregar as tabelas de fato. Aqui vimos uma síntese de tudo que usamos até agora.
+- A executar 5 tarefas de Fluxo de Dados ao mesmo tempo. Assim podemos ver que o Intergration Services pode rodar processos em paralelo.
+
+## 07 - Finalização
+- Que podemos ter tarefas que executam pacotes.
+- Que podemos criar parâmetros únicos que sejam válidos para todos os pacotes executados.
