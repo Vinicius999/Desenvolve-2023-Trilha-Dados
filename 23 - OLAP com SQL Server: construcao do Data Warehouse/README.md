@@ -22,3 +22,6 @@
 - Criar uma dimensão usando mais de uma tabela como fonte (Modelo Snow Flake);
 - Montar uma dimensão irregular no Analysis Services e os cuidados que temos que tomar para não apresentar membros repetidos;
 - Criar uma dimensão tempo, como associar a inteligência de negócio à dimensão (Business Intelligence) e finalmente os cuidados para que os identificadores de tempo sejam mostrados na navegação da dimensão por sua ordem correta.
+## Aula 04 - Criação de OLAPs
+- Criar uma base OLAP baseada em uma ou mais tabelas de fato do Data Warehouse.
+- Criar indicadores calculados.
