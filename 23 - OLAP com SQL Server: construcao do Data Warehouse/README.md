@@ -16,3 +16,9 @@
 - Criar uma dimensão baseada em uma única tabela;
 - Criar hierarquias e navegar por elas;
 - Processar o modelo para que ele seja criado e refletido no servidor OLAP no Analysis Services.
+
+## Aula 03 - Snow Flake, Tempo e Pai-Filho
+
+- Criar uma dimensão usando mais de uma tabela como fonte (Modelo Snow Flake);
+- Montar uma dimensão irregular no Analysis Services e os cuidados que temos que tomar para não apresentar membros repetidos;
+- Criar uma dimensão tempo, como associar a inteligência de negócio à dimensão (Business Intelligence) e finalmente os cuidados para que os identificadores de tempo sejam mostrados na navegação da dimensão por sua ordem correta.
