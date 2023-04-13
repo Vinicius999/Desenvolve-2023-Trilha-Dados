@@ -25,3 +25,10 @@
 ## Aula 04 - Criação de OLAPs
 - Criar uma base OLAP baseada em uma ou mais tabelas de fato do Data Warehouse.
 - Criar indicadores calculados.
+## Aula 05 - Desnormalização base de dados
+- Que temos que ter cuidado quando cruzamos indicadores que não cruzam com as mesmas dimensões.
+- Que, para resolver este problema, devemos ratear os indicadores usando um único critério.
+- Como criamos uma consulta nomeada baseado em um comando SQL e como transformá-la em um OLAP.
+## Aula 06 - Carga Final
+- A fazer a carga do OLAP pelo Integration Services
+- A carregar os OLAPs após a atualização das fatos do Data Warehouse.
