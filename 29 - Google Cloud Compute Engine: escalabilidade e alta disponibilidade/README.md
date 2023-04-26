@@ -16,3 +16,10 @@
 - Por que utilizar a linha de comando
 - Como instalar e configurar o ***Google Cloud SDK***
 - Como enviar arquivos através do **gsutil**
+
+## Preparando o front-end
+- Uma forma inteligente do gsutil, enviando somente as alterações (rsync)
+- Como remover objetos
+- Como ajustando as permissões
+- Como ajustar o HTML no Google Storage
+- Como copiar o diretório html para a instância
