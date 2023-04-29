@@ -23,3 +23,10 @@
 - Como ajustando as permissões
 - Como ajustar o HTML no Google Storage
 - Como copiar o diretório html para a instância
+
+## Escalando o site
+- Como reservar um IP
+- Como criar uma imagem para a instância
+- Detach IP
+- Como criar um instance template
+- Como criar um instance group
