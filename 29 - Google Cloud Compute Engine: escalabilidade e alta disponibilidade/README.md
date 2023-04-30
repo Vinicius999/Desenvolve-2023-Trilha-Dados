@@ -17,16 +17,24 @@
 - Como instalar e configurar o ***Google Cloud SDK***
 - Como enviar arquivos através do **gsutil**
 
-## Preparando o front-end
+## Aula 03 - Preparando o front-end
 - Uma forma inteligente do gsutil, enviando somente as alterações (rsync)
 - Como remover objetos
 - Como ajustando as permissões
 - Como ajustar o HTML no Google Storage
 - Como copiar o diretório html para a instância
 
-## Escalando o site
+## Aula 04 - Escalando o site
 - Como reservar um IP
 - Como criar uma imagem para a instância
 - Detach IP
 - Como criar um instance template
 - Como criar um instance group
+
+## Aula 05 - Alta disponibilidade
+- Como reservar um IP global, configurando o DNS
+- Como configurar o Load Balancer DNS
+- Health Check
+- Como customizar o Health Check
+- Como configurar o CDN
+- Como criar regras no firewall
