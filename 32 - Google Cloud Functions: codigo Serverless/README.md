@@ -28,3 +28,17 @@ Passos realizados:
 - Existem vários triggers para acionar a execução como Pub/Sub ou Cloud Storage
   - Cada trigger tem alguns eventos associado
 - Existem Logs que mostram a saída de execução das funções
+
+## Aula 04 - Dimensionando os recursos
+
+- Os recursos importantes, como tempo de execução e a memória, pode ser configurados e alteradas
+- Cada alteração da função gera uma nova versão e novo deploy
+- Uma função pode ser encerrado pelo sucesso, erro ou timeout
+- Nos logs encontramos vários infos úteis como tempo de execução, data, hora, nome, plataforma, versão etc
+- Nos logs podemos filtrar pelas funções
+- No CLI usamos o comando `gcloud functions logs`:
+  - `gcloud functions logs read` (os últimos 20 eventos)
+  - `gcloud functions logs read helloGET`
+  - `gcloud functions logs read info-storage --limit=100`
+- Para receber mais detalhes sobre uma função: `gcloud functions describe info-storage`
+- Os logs também podem ser baixados pela interface
