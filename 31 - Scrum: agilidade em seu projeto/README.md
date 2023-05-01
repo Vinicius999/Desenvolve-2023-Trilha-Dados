@@ -13,3 +13,9 @@
 ## Aula 06 - Product Backlog, Sprint Backlog e suas partes
 
 ## Aula 07 - Scrum Master
+
+## Aula 08 - Product Owner
+
+## Aula 09 - Desenvolvedores
+
+## Aula 10 - O time todo
