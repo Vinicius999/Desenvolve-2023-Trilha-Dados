@@ -42,3 +42,5 @@ Passos realizados:
   - `gcloud functions logs read info-storage --limit=100`
 - Para receber mais detalhes sobre uma função: `gcloud functions describe info-storage`
 - Os logs também podem ser baixados pela interface
+
+## Aula 05 - 
