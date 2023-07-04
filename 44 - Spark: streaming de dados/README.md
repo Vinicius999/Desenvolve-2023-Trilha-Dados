@@ -1,56 +1,51 @@
  
 
-# Aprofundando no Airflow: Executores Local e Celery
+# Spark: streaming de dados
 
 ### Resumo do Curso
 
-- Aprenda como utilizar o Python para criar aplicações Spark
-- Descubra como fazer ciência de dados com as ferramentas do Spark
-- Conheça o DataFrame do Spark
-- Manipule conjuntos de dados volumosos
-- Conheça e crie arquivos utilizados em projetos Big Data
+- Aprenda sobre dados em batch e streaming
+- Entenda a diferença entre ETL x ELT
+- Utilize o socket com código python
+- Realize conexão entre o client e o listener
+- Realize a conexão com a API do Twitter
+- Extraia os tweets em tempo real
+- Armazene os dados em streaming em CSV
+- Projete um contador de palavras
+- Construa uma nuvem de palavras atualizada automaticamente
 
-### Aula 01 - Começando o trabalho 
+### Aula 01 - Dados em streaming 
 
-- Conhecemos o projeto Apache Spark.
-- Falamos sobre a interface para Apache Spark em Python.
-- Conhecemos os recursos do Spark.
-- Aprendemos a configurar o Spark no sistema operacional Windows.
-- Vimos como utilizar o Spark em nosso notebook do Colab.
+- Identificar o que é a conexão em batch e em streaming;
+- Diferenciar o ETL do ELT;
+- Utilizar o socket;
+- Esquematizar o cliente (client) e o servidor (listener).
 
-### Aula 02 - Carregamento de dados
+### Aula 02 - Comunicação client-listener
 
-- Como iniciar uma SparkSession.
-- Conhecemos os métodos e atributos básicos da classe SparkSession.
-- Como criar Spark DataFrames.
-- Como carregar conteúdo de arquivos CSV particionados em uma DataFrame do Spark.
+- Instalar e configurar o VSCODE para utilizarmos a linguagem python;
+- Criar e configurar um socket;
+- Configurar o listener;
+- Configurar o cliente;
+- Realizar a conexão entre eles e enviar dados de um para o outro.
 
-### Aula 03 - Manipulando os dados
+### Aula 03 - Conexão com o Twitter
 
-- Como alterar os nomes das colunas de um DataFrame.
-- Como identificar os tipos de variáveis em um DataFrames.
-- Os tipos de dados suportados pelo Spark.
-- Algumas funções básicas do Spark e como aplicá-las.
-- Como fazer algumas conversões de tipo.
+- Criar uma conta de desenvolvedor do twitter;
+- Configurar o listener que vai conectar com a API do twitter;
+- Utilizar o bearer token no código;
+- Filtrar com uma palavra chave os tweets.
 
-### Aula 04 - Seleções e consultas
+### Aula 04 - Client do Twitter
 
-- Selecionar colunas específicas de um DataFrame.
-- Criar colunas em um DataFrame.
-- Ordenar os dados de um DataFrame.
-- Fazer filtros com as colunas de um DataFrame.
-- Fazer busca por conteúdos específicos em uma coluna de um DataFrame.
+- Configurar o client do twitter;
+- Criar uma sessão do Spark;
+- Construir uma query para visualizarmos os tweets na tela;
+- Construir um contador de palavras.
 
-### Aula 05 - Agregações e junções
+### Aula 05 - Nuvem de palavras
 
-- Gerar agrupamentos com o método `groupBy`;
-- Criar sumarizações com os métodos `agg` e `summary`;
-- Utilizar o método `join` para fazer junções entre DataFrame com o uso de chaves de ligação;
-- Usar o método `sql` para escrever queries com expressões SQL tradicionais.
+- Armazenar os tweets no formato csv;
+- Construir uma nuvem de palavras dinâmicas;
+- Fazer tratamentos para evitar erros no word cloud.
 
-### Aula 06 - Formas de armazenamento
-
-- Como criar arquivos CSV com o conteúdo de DataFrames do Spark;
-- Sobre o projeto Apache Parquet;
-- Como criar arquivos PARQUET com o conteúdo de DataFrames do Spark;
-- Como configurar o particionamento de arquivos no Spark.
